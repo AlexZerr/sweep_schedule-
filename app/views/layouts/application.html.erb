@@ -15,14 +15,14 @@
 
     <div class="row">
 
-      <div class="col-lg-10">
+      <div class="col-lg-9">
         <div id="main-content">
           <%= yield %>
         </div>
       </div>
 
       <% if !@hide_sidebar %>
-        <div class="col-lg-2">
+        <div class="col-lg-3">
           <div id="side">
             <%= render partial: "layouts/sidebar" %>
             <%= yield :sidebar %>
