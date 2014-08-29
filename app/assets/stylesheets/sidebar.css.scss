@@ -1,0 +1,23 @@
+#main-container {
+  margin: 20px;
+  
+  .side-container {
+    background-color: #80CCFF;
+    min-height: 375px;
+    margin: 5px;
+    margin-left: 0px;
+
+    .side {
+      margin: 5px;
+    }
+
+  }
+
+  #main-content {
+    background-color: #E7E7E7;
+    min-height: 375px;
+    margin-right: -25px;
+    margin-top: 5px;
+  }
+
+}

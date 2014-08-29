@@ -45,7 +45,7 @@ gem 'autoprefixer-rails'
 gem 'uglifier'
 
 # Use CoffeeScript for .js.coffee assets and views
-#gem 'coffee-rails'
+gem 'coffee-rails'
 
 # Address Parsing
 gem 'Indirizzo'
