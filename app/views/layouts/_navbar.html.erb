@@ -14,23 +14,36 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
 
-        <li><%= link_to "link", "#", class: "active" %></li>
-        <li><a href="#">Link</a></li>
+        <li><%= link_to "About", "#", class: "active" %></li>
+        <li><%= link_to "Home", "#", class: "active" %></li>
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
-          <%= link_to "#", class: "dropdown-toggle", data: { toggle: "dropdown"} do %>
-            Dropdown <span class="caret"></span>
-          <% end %>
-          <ul class="dropdown-menu" role="menu">
-            <li><%= link_to "Action", "#" %></li>
-            <!-- divider -->
-            <li class="divider"></li>
-            <li><%= link_to "seperated Action", "#" %></li>
 
+        <% if current_user %>
+
+          <li class="dropdown">
+            <%= link_to "#", class: "dropdown-toggle", data: { toggle: "dropdown"} do %>
+              Dropdown <span class="caret"></span>
+            <% end %>
+            <ul class="dropdown-menu" role="menu">
+              <li><%= link_to "Account", "#" %></li>
+              <!-- divider -->
+              <li class="divider"></li>
+              <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+
+            </ul>
+          </li>
+
+        <% else %>
+
+          <ul class="nav navbar-nav">
+            <li><%= link_to "Signin", "#", class: "active" %></li>
+            <li><%= link_to "Signup", "#", class: "active" %></li>
           </ul>
-        </li>
+
+        <% end %>
+
       </ul>
 
     </div>
