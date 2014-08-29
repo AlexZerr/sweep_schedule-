@@ -7,30 +7,43 @@
   <%= csrf_meta_tags %>
 </head>
   <body>
-   <% flash.each do |name, message| %>
-      <div id="flash_<%= name %>">
-        <%= message %>
-      </div>
-    <% end if !flash.blank? %>
-
     <div class="row">
+      <div class="col-lg-12">
+        <div id="main-container">
 
-      <div class="col-lg-9">
-        <div id="main-content">
-          <%= yield %>
+          <% flash.each do |name, message| %>
+            <div id="flash_<%= name %>">
+              <%= message %>
+            </div>
+          <% end if !flash.blank? %>
+
+          <!-- Navbar begin -->
+          <%= render "layouts/navbar" %>
+          <!-- Navbar end -->
+
+          <div class="row">
+
+            <div class="col-lg-9">
+              <div id="main-content">
+                <%= yield %>
+              </div>
+            </div>
+
+            <% if !@hide_sidebar %>
+              <div class="col-lg-3">
+                <div class="side-container">
+                  <div class="side">
+                    <%= render partial: "layouts/sidebar" %>
+                    <%= yield :sidebar %>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+
+          </div>
+
         </div>
       </div>
-
-      <% if !@hide_sidebar %>
-        <div class="col-lg-3">
-          <div id="side">
-            <%= render partial: "layouts/sidebar" %>
-            <%= yield :sidebar %>
-          </div>
-        </div>
-      <% end %>
-
     </div>
-
   </body>
 </html>
