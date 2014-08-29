@@ -4,11 +4,16 @@
   margin-left: 50px;
   
   .side-container {
-    background-color: #80CCFF;
+    background-color: #D4F1FA;
     min-height: 375px;
+    padding: 10px;
 
     .side {
 
+      .side-head {
+        margin: 1px;
+        color: red;
+      }
     }
 
   }
@@ -16,6 +21,7 @@
   #main-content {
     background-color: #E7E7E7;
     min-height: 375px;
+    padding: 10px;
   }
 
 }
