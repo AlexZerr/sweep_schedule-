@@ -11,6 +11,7 @@ class ReservationsController < ApplicationController
 
   def create
     @reservation = @user.reservations.new(reservation_params)
+    authorize @reservation
     if @reservation.save
       redirect_to user_reservation_path(@user, @reservation), notice: "Your reservation has been created."
     end
