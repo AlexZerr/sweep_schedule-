@@ -4,8 +4,10 @@ Rails.application.routes.draw do
     path_names: { sign_in: "login", sign_out: "logout", sign_up: "signup" } 
 
   resources :users, only: [:index, :show] do
-    resources :reservations
+    resources :reservations, except: [:index]
   end
+
+  resources :reservations, only: [:index]
 
   
 
