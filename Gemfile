@@ -50,6 +50,9 @@ gem 'coffee-rails'
 # Address Parsing
 gem 'Indirizzo'
 
+#turbo-links
+gem 'turbolinks'
+
 # Api
 gem "grape"
 gem "newrelic-grape"
