@@ -20,4 +20,5 @@ Rails.application.routes.draw do
   root to: "static_pages#home"
 
   get '/trucks', to: 'static_pages#trucks', as: "trucks"
+  get '/about', to: 'static_pages#about', as: "about"
 end

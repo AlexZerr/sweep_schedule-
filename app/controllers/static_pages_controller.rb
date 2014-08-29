@@ -7,4 +7,9 @@ class StaticPagesController < ApplicationController
   def trucks
 
   end
+
+  def about
+
+  end
+
 end
