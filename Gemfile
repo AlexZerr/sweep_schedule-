@@ -24,6 +24,8 @@ gem "pundit"
 # Monitoring & Stats
 gem "newrelic_rpm"
 
+gem "railties"
+
 # Pretty Params
 #gem "friendly_id"
 

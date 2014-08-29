@@ -337,6 +337,7 @@ DEPENDENCIES
   rack-cors
   rails (= 4.1.4)
   rails_12factor
+  railties
   ruby-oembed
   sass-rails
   sidekiq
