@@ -26,6 +26,8 @@ gem "newrelic_rpm"
 
 gem "railties"
 
+#heroku static assets
+gem "rails_serve_static_assets", group: :production
 # Pretty Params
 #gem "friendly_id"
 
