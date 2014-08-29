@@ -2,6 +2,8 @@
   <%= f.label :job_type %>
   <%= f.collection_select :job_type, job_types, :first, :last %></br>
   <%= f.label :schedule_date %>
+  </br>
   <%= f.datetime_select :schedule_date, discard_year: true, ampm: true, minute_step: 15 %>
+  </br>
   <%= f.submit %>
 <% end %>
