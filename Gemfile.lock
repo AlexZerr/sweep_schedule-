@@ -337,6 +337,7 @@ DEPENDENCIES
   rack-cors
   rails (= 4.1.4)
   rails_12factor
+  rails_serve_static_assets
   railties
   ruby-oembed
   sass-rails
