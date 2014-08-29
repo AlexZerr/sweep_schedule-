@@ -74,7 +74,7 @@ gem "jquery-ui-rails"
 
 # Compass
 #gem "compass-rails", '2.0.alpha.0'
-#gem "compass-rails", '2.0.0'
+gem "compass-rails", '2.0.0'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder'

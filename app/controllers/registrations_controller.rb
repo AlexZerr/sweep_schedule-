@@ -8,7 +8,8 @@ class RegistrationsController < Devise::RegistrationsController
   def create
     @user = User.new(resource_params)
     if @user.save
-      redirect_to :root
+      sign_in @user
+      redirect_to :root, notice: "Thank you for signing up."
     end
   end
 

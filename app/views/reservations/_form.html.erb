@@ -1,0 +1,7 @@
+<%= form_for [@user, @reservation] do |f| %>
+  <%= f.label :job_type %>
+  <%= f.collection_select :job_type, job_types, :first, :last %></br>
+  <%= f.label :schedule_date %>
+  <%= f.datetime_select :schedule_date, discard_year: true, ampm: true, minute_step: 15 %>
+  <%= f.submit %>
+<% end %>
