@@ -103,6 +103,9 @@ gem 'paranoid2'
 # Ancestry / Tree Relationships
 gem 'ancestry'
 
+#heroku production assets
+gem 'rails_12factor', group: :production
+
 #uploader
 gem "carrierwave", "~> 0.9.0"
 gem "mini_magick", "~> 3.4"
