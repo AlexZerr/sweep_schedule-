@@ -1,4 +1,5 @@
 class Reservation < ActiveRecord::Base
+  
 
   belongs_to :user
 
@@ -7,7 +8,7 @@ class Reservation < ActiveRecord::Base
   end
 
   def schedule_date_start_hour
-    schedule_date.hour
+    schedule_date.to_datetime.strftime("%m/%d/%Y %I:%M %p")
   end
 
   def start_time
@@ -18,6 +19,22 @@ class Reservation < ActiveRecord::Base
     end_hour.strftime("%I %p")
    end
 
+
+  def check_schedule_times()
+    res = Reservation.where(schedule_date: schedule_date.beginning_of_month..schedule_date.end_of_month)
+#    if res.map{|e| (e.start_hour.hour)..(e.end_hour.hour ).include?(start_hour.hour ) }
+#      errors[:base] << "This time has been taken"
+#    end
+    res.each do |r|
+      if start_hour.hour.in?( (r.start_hour.hour)..(r.end_hour.hour) )
+        errors[:base] << "This time has been taken"
+      end
+    end
+  end
+
+  def res_month
+    schedule_date.month
+  end
 
   private
 

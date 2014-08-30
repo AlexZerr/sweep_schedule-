@@ -10,7 +10,7 @@ class ReservationsController < ApplicationController
 
   def new
     @reservation = @user.reservations.new
-    @job_types = [ ["Bid", "Bid"], ["Sweep", "Sweep"] ]
+    @job_types = [ ["Sweep", "Sweep"], ["Bid", "Bid"] ]
     check_for_reservations_by_date
   end
 
@@ -19,8 +19,13 @@ class ReservationsController < ApplicationController
     @reservation.start_hour = @reservation.schedule_date
     @reservation.end_hour = @reservation.schedule_date + params[:date][:hour].to_i.hours
     authorize @reservation
-    if @reservation.save
+    @reservation.check_schedule_times()
+    if @reservation.errors.empty?
+      @reservation.save
       redirect_to user_reservation_path(@user, @reservation), notice: "Your reservation has been created."
+    else
+      @errors = @reservation.errors.full_messages
+      redirect_to :back, notice: "#{ @errors }"
     end
   end
 
