@@ -1,2 +1,2 @@
-$('.reservations').html('<%= j(render 'reservations/reservations', locals: {reservations: @reservations} ) %>');
+$('.reservations').html('<%= j(render 'reservations/calendar', locals: {reservations: @reservations} ) %>');
 cosole.log("<%= @reservations %>");
