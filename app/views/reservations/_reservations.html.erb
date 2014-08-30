@@ -4,7 +4,7 @@
       <ul class="list-reservation">
         <li>Job Type:<%= r.job_type %></li>
         <li>Date:<%= r.display_date %></li>
-        <li>From:<%= r.start_hour.strftime("%I:%M %p") if r.start_hour.present? %>
+        <li>From: <%= r.start_hour.strftime("%I:%M %p") if r.start_hour.present? %>
          To: <%= r.end_hour.strftime("%I:%M %p") if r.end_hour.present? %></li>
        </ul>
     </div>
