@@ -11,11 +11,11 @@ class Reservation < ActiveRecord::Base
   end
 
   def start_time
-    start_hour.hour
+    start_hour.strftime("%I %p")
   end
 
    def end_time
-    end_hour.hour
+    end_hour.strftime("%I %p")
    end
 
 

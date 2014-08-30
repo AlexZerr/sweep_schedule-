@@ -1,18 +1,22 @@
 class StaticPagesController < ApplicationController
 
+  before_filter :set_new_reservation
+
   def home
-    @user = current_user
-    @reservation = @user.reservations.new if @user
   end
 
   def trucks
-    @user = current_user
-    @reservation = @user.reservations.new if @user
   end
 
   def about
-    @user = current_user
-    @reservation = @user.reservations.new if @user
+  end
+
+  private
+
+  def set_new_reservation
+    if current_user
+      @reservation = current_user.reservations.new 
+    end
   end
 
 end

@@ -1,0 +1,21 @@
+<% @reservations.each do |res| %>
+  <table class="table">
+    <thead>
+      <tr>
+        <th class="col-md-3">Time</th>
+        <th class="col-md-3">Date</th>
+        <th class="col-md-3">Amount</th>
+        <th class="col-md-3">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% (res.start_hour.to_datetime..res.end_hour.to_datetime).each do |d| %>
+        <tr>
+          <td>
+            <%= d.strftime("%I %p") %>
+          </td>
+        </tr>
+      <% end %> 
+    </tbody>
+  </table>
+<% end %>
