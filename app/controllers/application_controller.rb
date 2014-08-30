@@ -18,9 +18,9 @@ class ApplicationController < ActionController::Base
    def check_for_reservations_by_date
     if params[:date_search].present?
       date = Date.strptime(params[:date_search], '%m/%d/%Y')
-      @reservations = Reservation.where(schedule_date: (date.beginning_of_day..date.end_of_day) )
+      @reservations = Reservation.where(schedule_date: (date.beginning_of_day..date.end_of_day)).order("start_hour ASC")
     else
-      @reservations = Reservation.where( schedule_date: (DateTime.now.beginning_of_day..DateTime.now.end_of_day) )
+      @reservations = Reservation.where( schedule_date: (DateTime.now.beginning_of_day..DateTime.now.end_of_day)).order("start_hour ASC")
     end
   end 
 end

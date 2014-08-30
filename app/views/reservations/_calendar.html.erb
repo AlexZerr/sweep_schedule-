@@ -1,0 +1,27 @@
+<% @reservations.each do |res| %>
+  <table class="table">
+    <thead>
+      <tr>
+        <th class="col-md-4"><%= res.user.company_name %></th>
+        <th class="col-md-4">Time</th>
+        <th class="col-md-4">Expected Finish Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% (res.start_hour.to_datetime.hour..res.end_hour.to_datetime.hour).each do |d| %>
+        <tr>
+          <td>
+            <%= res.job_type %>
+          </td>
+          <td>
+            <%#= d.strftime("%I %p") %>
+            <%= Time.parse("#{d}:00").strftime("%I %p") %>
+          </td>
+          <td>
+            <%= res.end_time %>
+          </td>
+        </tr>
+      <% end %> 
+    </tbody>
+  </table>
+<% end %>
