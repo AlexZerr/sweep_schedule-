@@ -16,6 +16,8 @@ class ReservationsController < ApplicationController
 
   def create
     @reservation = @user.reservations.new(reservation_params)
+    @reservation.start_hour = @reservation.schedule_date
+    @reservation.end_hour = @reservation.schedule_date + params[:date][:hour].to_i.hours
     authorize @reservation
     if @reservation.save
       redirect_to user_reservation_path(@user, @reservation), notice: "Your reservation has been created."
@@ -46,7 +48,7 @@ class ReservationsController < ApplicationController
 
   def reservation_params
     params.require(:reservation).permit(
-      :job_type, :schedule_date, :user_id, :date_search
+      :job_type, :schedule_date, :user_id, :date_search, :start_hour, :end_hour
     )
   end
   

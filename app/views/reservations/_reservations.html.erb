@@ -1,3 +1,12 @@
 <% @reservations.each do |r| %>
-  <%= r.job_type %></br>
+  <div class="row">
+    <div class="col-sm-12">
+      <ul class="list-reservation">
+        <li>Job Type:<%= r.job_type %></li>
+        <li>Date:<%= r.display_date %></li>
+        <li>From:<%= r.start_hour.strftime("%I:%M %p") if r.start_hour.present? %>
+         To: <%= r.end_hour.strftime("%I:%M %p") if r.end_hour.present? %></li>
+       </ul>
+    </div>
+  </div>
 <% end %>

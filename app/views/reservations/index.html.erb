@@ -1,13 +1,3 @@
- <div id="search">
-   <%= form_tag reservations_path, method: :get, remote: true  do %>
-    <div style="color:red">
-      Search by name, or description</br>
-      <%= text_field_tag :date_search, params[:date_search], data: {provide: "datepicker"} %>
-      <%= submit_tag "Search", :name => nil %>
-    </div>
-  <% end %>
-</div> 
-
 <div class="reservations">
   <%= render "reservations/reservations" %>
 </div>
