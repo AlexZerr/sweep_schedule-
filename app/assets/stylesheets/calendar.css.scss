@@ -1,0 +1,22 @@
+.table {
+  background-color: #BBFABE;
+  
+  .yel {
+    background-color: #FAFAAF;
+  }
+
+  .type {
+
+    &.type-bid {
+      background-color: #FAEE69;
+    }
+
+    &.type-sweep {
+      background-color: #FAA78C;
+    }
+  }
+}
+
+.reserved {
+  background-color: red;
+}

@@ -1,27 +1,32 @@
-<% @reservations.each do |res| %>
-  <table class="table">
-    <thead>
+<table class="table">
+  <thead>
+    <tr>
+      <th class="col-md-1">Time</th>
+      <th class="col-md-4">Company</th>
+      <th class="col-md-4">Expected Finish Time</th>
+      <th class="col-md-3">Type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% (Time.now.beginning_of_day.hour..Time.now.end_of_day.hour).each do |i| %>
       <tr>
-        <th class="col-md-4"><%= res.user.company_name %></th>
-        <th class="col-md-4">Time</th>
-        <th class="col-md-4">Expected Finish Time</th>
+        <td class="yel">
+          <%= Time.parse("#{i}:00").strftime("%I %p") %>
+        </td>
+        <% @reservations.each do |res| %>
+          <% if (res.start_hour.to_datetime.hour.to_i..res.end_hour.to_datetime.hour.to_i).include?(i) %>
+            <td class="type type-<%= res.job_type.downcase %>">
+              <%= res.user.company_name %>
+            </td>
+            <td class="type type-<%= res.job_type.downcase %>">
+              <%= res.end_time %>
+            </td>
+            <td class="type type-<%= res.job_type.downcase %>">
+              <%= res.job_type %>
+            </td>
+          <% end %> 
+        <% end %> 
       </tr>
-    </thead>
-    <tbody>
-      <% (res.start_hour.to_datetime.hour..res.end_hour.to_datetime.hour).each do |d| %>
-        <tr>
-          <td>
-            <%= res.job_type %>
-          </td>
-          <td>
-            <%#= d.strftime("%I %p") %>
-            <%= Time.parse("#{d}:00").strftime("%I %p") %>
-          </td>
-          <td>
-            <%= res.end_time %>
-          </td>
-        </tr>
-      <% end %> 
-    </tbody>
-  </table>
-<% end %>
+    <% end %>
+  </tbody>
+</table>
