@@ -5,5 +5,9 @@
   </br>
   <%= f.datetime_select :schedule_date, discard_year: true, ampm: true, minute_step: 15 %>
   </br>
+  <strong> How Long do you estimate this job will take?</strong>
+  <%= select_hour Time.now %>
+  <strong>hours</strong>
+  </br>
   <%= f.submit %>
 <% end %>

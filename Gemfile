@@ -42,6 +42,8 @@ gem 'sass-rails'
 # Twitter Bootstrap
 gem "bootstrap-sass"
 
+#datepicker for bootstrap
+gem 'bootstrap-datepicker-rails'
 #bootstrap bower library
 gem 'autoprefixer-rails'
 

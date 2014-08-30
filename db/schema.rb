@@ -19,6 +19,8 @@ ActiveRecord::Schema.define(version: 20140829071902) do
   create_table "reservations", force: true do |t|
     t.string   "job_type"
     t.datetime "schedule_date", null: false
+    t.datetime "start_hour"
+    t.datetime "end_hour"
     t.integer  "user_id",       null: false
     t.datetime "created_at"
     t.datetime "updated_at"
