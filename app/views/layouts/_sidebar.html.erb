@@ -10,7 +10,15 @@
         <div class="col-lg-12">
           <div class="side-main">
             <h5> <%= current_user.company_name %> </h5>
-            <%= render "reservations/form" %>
+            <div>
+              <%= render "reservations/form" %>
+            </div>
+            <div>
+              <%= render "reservations/reservation_search" %>
+            </div>
+            <div class="reservations">
+              <%= render "reservations/reservations" %>
+            </div>
           </div>
         </div>
       </div>
