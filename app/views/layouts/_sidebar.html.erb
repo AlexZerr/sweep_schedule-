@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-lg-12">
     <div class="side-head">
-      Schedule A Truck
+            <h5> <%= current_user.company_name %> </h5>
     </div>
 
     <% if current_user.present? %>
@@ -9,10 +9,6 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="side-main">
-            <h5> <%= current_user.company_name %> </h5>
-            <div>
-              <%= render "reservations/form" %>
-            </div>
             <div>
               <%= render "reservations/reservation_search" %>
             </div>
