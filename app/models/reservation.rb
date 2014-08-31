@@ -1,5 +1,6 @@
 class Reservation < ActiveRecord::Base
   
+  after_create :send_reservation_email
 
   belongs_to :user
 
@@ -34,5 +35,9 @@ class Reservation < ActiveRecord::Base
   end
 
   private
+
+  def send_reservation_email
+    ReservationMailer.send_reservation_notice(id).deliver
+  end
 
 end
