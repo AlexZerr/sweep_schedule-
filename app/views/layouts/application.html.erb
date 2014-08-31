@@ -15,15 +15,16 @@
       <div class="col-lg-12">
         <div id="main-container">
 
+          <!-- Navbar begin -->
+          <%= render "layouts/navbar" %>
+          <!-- Navbar end -->
+
           <% flash.each do |name, message| %>
             <div id="flash_<%= name %>">
               <%= message %>
             </div>
           <% end if !flash.blank? %>
 
-          <!-- Navbar begin -->
-          <%= render "layouts/navbar" %>
-          <!-- Navbar end -->
 
           <% if !@hide_sidebar %>
             <div class="row">

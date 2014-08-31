@@ -19,7 +19,7 @@ class ReservationsController < ApplicationController
     @reservation.start_hour = @reservation.schedule_date
     @reservation.end_hour = @reservation.schedule_date + params[:date][:hour].to_i.hours
     authorize @reservation
-    @reservation.check_schedule_times()
+    @reservation.check_schedule_times
     if @reservation.errors.empty?
       @reservation.save
       redirect_to user_reservation_path(@user, @reservation), notice: "Your reservation has been created."
