@@ -1,2 +1,2 @@
-<%= @reservation.job_type %>
-<%= @reservation.schedule_date %>
+<strong><%= @reservation.job_type %>: </strong></br>
+<strong>From:</strong> <%= civil_date(@reservation.schedule_date) %></br> <strong>To:</strong> <%= civil_date(@reservation.end_hour) %>

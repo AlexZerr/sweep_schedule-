@@ -1,5 +1,6 @@
 class Reservation < ActiveRecord::Base
   
+  after_create :send_reservation_email
 
   belongs_to :user
 
@@ -20,11 +21,8 @@ class Reservation < ActiveRecord::Base
    end
 
 
-  def check_schedule_times()
-    res = Reservation.where(schedule_date: schedule_date.beginning_of_month..schedule_date.end_of_month)
-#    if res.map{|e| (e.start_hour.hour)..(e.end_hour.hour ).include?(start_hour.hour ) }
-#      errors[:base] << "This time has been taken"
-#    end
+  def check_schedule_times
+    res = Reservation.where(schedule_date: schedule_date.beginning_of_day..schedule_date.end_of_day)
     res.each do |r|
       if start_hour.hour.in?( (r.start_hour.hour)..(r.end_hour.hour) )
         errors[:base] << "This time has been taken"
@@ -37,5 +35,9 @@ class Reservation < ActiveRecord::Base
   end
 
   private
+
+  def send_reservation_email
+    ReservationMailer.send_reservation_notice(id).deliver
+  end
 
 end

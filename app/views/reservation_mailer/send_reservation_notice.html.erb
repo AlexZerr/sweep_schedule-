@@ -1,0 +1,7 @@
+<strong>A new reservation has been requested</strong>
+<ul class="list-reservation">
+  <%= @reservation.user.company_name %>
+  <li style="margin-left:20px"><%= "Date: #{@reservation.display_date}" %></li>
+  <li style="margin-left:20px"><%= "From: #{@reservation.start_time} To: #{@reservation.end_time}" %></li>
+  <li style="margin-left:20px"><%= "Job Type: #{@reservation.job_type}"%></li>
+</ul>
