@@ -83,6 +83,9 @@ gem 'jbuilder'
 
 # lists
 #gem "acts_as_list"
+#
+# SMS Messaging
+gem 'twilio-ruby'
 
 # Deployment Notification
 #gem "flowdock"

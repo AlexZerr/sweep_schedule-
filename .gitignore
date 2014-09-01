@@ -16,6 +16,9 @@
 /tmp
 /config/database.yml
 /config/secrets.yml
+/config/twilio.yml
+app/models/concerns/send_sms.rb
+/app/helpers/twilio_helper.rb
 public/assets/*
 *.sass-cache
 

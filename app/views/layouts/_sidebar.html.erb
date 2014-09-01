@@ -12,9 +12,12 @@
             <div>
               <%= render "reservations/reservation_search" %>
             </div>
-            <h4><u>Schedule</u></h4>
+            <h4><u>Today's Schedule</u></h4>
             <div class="reservations">
-              <%= render "reservations/calendar" %>
+              <div class="day-schedule">
+                <h6>Fully Booked Times</h6>
+                <%= render "reservations/day_schedule" %>
+              </div>
             </div>
           </div>
         </div>
