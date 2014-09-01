@@ -1,4 +1,5 @@
 class Reservation < ActiveRecord::Base
+  include SendSms
   
   after_create :send_reservation_email
 
@@ -13,11 +14,11 @@ class Reservation < ActiveRecord::Base
   end
 
   def start_time
-    start_hour.strftime("%I %p")
+    start_hour.strftime("%I:%M %p")
   end
 
    def end_time
-    end_hour.strftime("%I %p")
+    end_hour.strftime("%I:%M %p")
    end
 
 
