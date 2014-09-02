@@ -98,7 +98,6 @@ gem 'sinatra', require: nil
 # Shh assets
 gem 'quiet_assets', :group => :development
 
-gem "asset_sync"
 
 # Make classes likeable
 #gem "likeable"
