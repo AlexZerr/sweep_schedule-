@@ -84,6 +84,7 @@ GEM
     compass-rails (2.0.0)
       compass (>= 0.12.2)
     connection_pool (2.0.0)
+    daemon_controller (1.2.0)
     debug_inspector (0.0.2)
     debugger-linecache (1.2.0)
     descendants_tracker (0.0.4)
@@ -186,6 +187,10 @@ GEM
     orm_adapter (0.5.0)
     paranoid2 (1.1.5)
       activerecord (>= 4.1.0)
+    passenger (4.0.50)
+      daemon_controller (>= 1.2.0)
+      rack
+      rake (>= 0.8.1)
     pg (0.17.1)
     polyglot (0.3.5)
     pry (0.10.1)
@@ -337,6 +342,7 @@ DEPENDENCIES
   newrelic-grape
   newrelic_rpm
   paranoid2
+  passenger
   pg
   pry-rails
   puma

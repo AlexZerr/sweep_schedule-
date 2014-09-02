@@ -135,6 +135,9 @@ group :development, :test do
   gem "letter_opener"
 #  gem "cane"
 end
+group :production do
+  gem 'passenger'
+end
 
 group :development do
 #  gem 'brakeman', require: false
