@@ -138,7 +138,6 @@ end
 group :production do
   gem 'passenger'
   gem 'execjs'
-  gem 'therubyracer'
 end
 
 group :development do
