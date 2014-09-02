@@ -10,22 +10,22 @@
       <h4>Need a truck?</br>Sign up and schedule one now</h4>
       <%= render "devise/registrations/form"%>
     </div>
-    <ul class="h4"><strong><u>Contact Us</u></strong>
-        <li>Phone: 303-691-0682</li>
-        <li>Email: <%= mail_to "theajbs@msn.com" %></li>
-    </ul>
   </div>
 
   <div class="col-sm-6">
-    <div class="home-image">
-      <%= image_tag "little-truck.jpg"%>
+    <div class="row">
+      <%= image_tag "little-truck.jpg", class: "col-sm-11 home-image" %>
     </div>
-    <ul class="h4"><strong><u>Services</u></strong>
+    <ul class="h4"><strong><u><%= link_to "Services", about_path %></u></strong>
         <li>Parking lot and road sweeping.</li>
         <li>Snow removal</li>
         <li>Striping</li>
         <li>Power Washing</li>
 
+    </ul>
+    <ul class="h4"><strong><u>Contact Us</u></strong>
+        <li>Phone: 303-691-0682</li>
+        <li>Email: <%= mail_to "theajbs@msn.com" %></li>
     </ul>
   </div>
 </div>

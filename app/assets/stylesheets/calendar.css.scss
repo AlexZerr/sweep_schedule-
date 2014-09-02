@@ -1,19 +1,38 @@
-.table {
-  background-color: #BBFABE;
-  margin: 2px;
-  
-  .yel {
-    background-color: #FAFAAF;
-  }
+.table-container {
+  margin-top: 10px;
+  border: 4px outset #C7C9C9;
+  padding-right: 2px;
 
-  .type {
-
-    &.type-bid {
-      background-color: #FAEE69;
+  .table {
+    background-color: #D9EEFC;
+    margin: 2px;
+    
+    thead {
+      background-color: #80CCFF;
     }
 
-    &.type-sweep {
-      background-color: #FAA78C;
+    tbody {
+      border-top: 5px inset #A0D6FA;
+      border-left: 4px inset white;
+
+      .yel {
+        background-color: #979998;
+        border: 4px outset #C3C7C3;
+        border-right: 2px outset black;
+      }
+
+      .type {
+
+        &.type-bid {
+          background-color: #FAEE69;
+        }
+
+        &.type-sweep {
+          background-color: #FAA78C;
+          border: 4px outset #FCCDCA;
+          border-left: 4px outset grey;
+        }
+      }
     }
   }
 }

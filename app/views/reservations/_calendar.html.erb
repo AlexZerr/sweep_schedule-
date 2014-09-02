@@ -11,7 +11,7 @@
     <% (Time.now.beginning_of_day.hour..Time.now.end_of_day.hour).each do |i| %>
       <tr>
         <td class="yel">
-          <%= Time.parse("#{i}:00").strftime("%I %p") %>
+          <%= Time.parse("#{i}:00").strftime("%l %p") %>
         </td>
         <% @reservations.each do |res| %>
           <% if (res.start_hour.to_datetime.hour.to_i..res.end_hour.to_datetime.hour.to_i).include?(i) %>

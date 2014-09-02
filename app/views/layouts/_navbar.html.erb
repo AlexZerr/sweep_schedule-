@@ -15,7 +15,7 @@
       <ul class="nav navbar-nav">
 
         <li><%= link_to "About", about_path, class: "active" %></li>
-        <li><%= link_to "Trucks", trucks_path, class: "active" %></li>
+        <li><%= link_to "Equipment", trucks_path, class: "active" %></li>
         <% if current_user %>
           <li><%= link_to "Schedule A Truck", new_user_reservation_path(current_user, @reservation), class: "active" %></li>
         <% else%>
