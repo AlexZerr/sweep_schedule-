@@ -103,6 +103,7 @@ gem 'ancestry'
 
 #heroku production assets
 gem 'rails_12factor', group: :production
+gem 'libv8', '~> 3.16.14.3'
 
 #uploader
 gem "carrierwave", "~> 0.9.0"
