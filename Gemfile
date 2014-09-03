@@ -118,6 +118,7 @@ gem 'rails_12factor', group: :production
 gem "carrierwave", "~> 0.9.0"
 gem "mini_magick", "~> 3.4"
 
+gem "libv8"
 gem 'ruby-oembed', require: 'oembed'
 
 group :development, :test do
@@ -138,7 +139,6 @@ group :production do
   gem 'passenger'
   gem 'execjs'
   gem 'therubyracer'
-  gem "libv8"
 end
 
 group :development do
