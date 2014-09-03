@@ -119,6 +119,7 @@ gem "carrierwave", "~> 0.9.0"
 gem "mini_magick", "~> 3.4"
 
 gem "libv8"
+gem "therubyracer"
 gem 'ruby-oembed', require: 'oembed'
 
 group :development, :test do
