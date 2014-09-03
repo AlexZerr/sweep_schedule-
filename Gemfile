@@ -117,9 +117,8 @@ gem 'rails_12factor', group: :production
 #uploader
 gem "carrierwave", "~> 0.9.0"
 gem "mini_magick", "~> 3.4"
+gem 'therubyracer'
 
-gem "libv8"
-gem "therubyracer"
 gem 'ruby-oembed', require: 'oembed'
 
 group :development, :test do
@@ -139,7 +138,6 @@ end
 group :production do
   gem 'passenger'
   gem 'execjs'
-  gem 'therubyracer'
 end
 
 group :development do
