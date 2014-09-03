@@ -294,7 +294,6 @@ DEPENDENCIES
   compass-rails (= 2.0.0)
   devise
   enum_accessor
-  execjs
   geocoder
   goldiloader
   grape

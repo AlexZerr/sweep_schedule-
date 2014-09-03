@@ -137,7 +137,6 @@ group :development, :test do
 end
 group :production do
   gem 'passenger'
-  gem 'execjs'
 end
 
 group :development do
