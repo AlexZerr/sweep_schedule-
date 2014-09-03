@@ -303,6 +303,7 @@ DEPENDENCIES
   jquery-rails
   jquery-ui-rails
   letter_opener
+  libv8
   mini_magick (~> 3.4)
   newrelic-grape
   newrelic_rpm

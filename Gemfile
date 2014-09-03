@@ -138,6 +138,7 @@ group :production do
   gem 'passenger'
   gem 'execjs'
   gem 'therubyracer'
+  gem "libv8"
 end
 
 group :development do
