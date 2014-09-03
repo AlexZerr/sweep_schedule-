@@ -123,6 +123,7 @@ group :development, :test do
 #  gem "cane"
 end
 group :production do
+  gem 'execjs'
 end
 
 group :development do
