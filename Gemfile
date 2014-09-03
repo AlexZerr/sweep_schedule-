@@ -32,8 +32,6 @@ gem "rails_serve_static_assets", group: :production
 # Geo-location
 gem "geocoder"
 
-gem 'slim'
-
 # Use SCSS for stylesheets
 gem 'sass-rails'
 
