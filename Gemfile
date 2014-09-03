@@ -61,7 +61,7 @@ gem 'turbolinks'
 #AMS for Grape
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
+gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -103,7 +103,6 @@ gem 'ancestry'
 
 #heroku production assets
 gem 'rails_12factor', group: :production
-gem 'therubyracer'
 
 #uploader
 gem "carrierwave", "~> 0.9.0"
