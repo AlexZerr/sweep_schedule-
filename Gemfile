@@ -8,7 +8,6 @@ gem 'sprockets', '2.11.0'
 # Database
 gem "pg"
 gem "enum_accessor"
-gem 'goldiloader'
 
 # Server
 gem "puma"
@@ -22,7 +21,6 @@ gem "devise"
 gem "pundit"
 
 # Monitoring & Stats
-gem "newrelic_rpm"
 
 gem "railties"
 
@@ -54,18 +52,13 @@ gem 'uglifier'
 gem 'coffee-rails'
 
 # Address Parsing
-gem 'Indirizzo'
 
 #turbo-links
 gem 'turbolinks'
 
 # Api
-gem "grape"
-gem "newrelic-grape"
-gem "rack-cors"
 
 #AMS for Grape
-gem 'grape-active_model_serializers'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
@@ -79,7 +72,6 @@ gem "jquery-ui-rails"
 gem "compass-rails", '2.0.0'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder'
 
 # lists
 #gem "acts_as_list"
@@ -96,8 +88,6 @@ gem 'sidekiq_mailer'
 gem 'sinatra', require: nil
 
 # Shh assets
-gem 'quiet_assets', :group => :development
-
 
 # Make classes likeable
 #gem "likeable"
@@ -113,11 +103,11 @@ gem 'ancestry'
 
 #heroku production assets
 gem 'rails_12factor', group: :production
+gem 'therubyracer'
 
 #uploader
 gem "carrierwave", "~> 0.9.0"
 gem "mini_magick", "~> 3.4"
-gem 'therubyracer'
 
 gem 'ruby-oembed', require: 'oembed'
 
@@ -136,7 +126,6 @@ group :development, :test do
 #  gem "cane"
 end
 group :production do
-  gem 'passenger'
 end
 
 group :development do
