@@ -10,9 +10,9 @@ gem "pg"
 gem "enum_accessor"
 
 # Server
-gem "puma"
-gem 'unicorn'
-gem 'unicorn-rails'
+#gem "puma"
+#gem 'unicorn'
+#gem 'unicorn-rails'
 
 # User Authentication
 gem "devise"
@@ -123,7 +123,7 @@ group :development, :test do
 #  gem "cane"
 end
 group :production do
-  #gem 'passenger'
+  gem 'passenger'
   gem 'therubyracer'
   gem 'execjs'
 end

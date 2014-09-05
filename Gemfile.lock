@@ -71,6 +71,7 @@ GEM
     compass-rails (2.0.0)
       compass (>= 0.12.2)
     connection_pool (2.0.0)
+    daemon_controller (1.2.0)
     debug_inspector (0.0.2)
     debugger-linecache (1.2.0)
     devise (3.3.0)
@@ -94,7 +95,6 @@ GEM
       railties (>= 3.2.16)
     json (1.8.1)
     jwt (1.0.0)
-    kgio (2.9.2)
     launchy (2.4.2)
       addressable (~> 2.3)
     letter_opener (1.2.0)
@@ -112,6 +112,10 @@ GEM
     orm_adapter (0.5.0)
     paranoid2 (1.1.5)
       activerecord (>= 4.1.0)
+    passenger (4.0.50)
+      daemon_controller (>= 1.2.0)
+      rack
+      rake (>= 0.8.1)
     pg (0.17.1)
     polyglot (0.3.5)
     pry (0.10.1)
@@ -120,8 +124,6 @@ GEM
       slop (~> 3.4)
     pry-rails (0.3.2)
       pry (>= 0.9.10)
-    puma (2.9.0)
-      rack (>= 1.1, < 2.0)
     pundit (0.3.0)
       activesupport (>= 3.0.0)
     rack (1.5.2)
@@ -149,7 +151,6 @@ GEM
       activesupport (= 4.1.4)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
-    raindrops (0.13.0)
     rake (10.3.2)
     redis (3.1.0)
     redis-namespace (1.5.1)
@@ -208,13 +209,6 @@ GEM
     uglifier (2.5.3)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
-    unicorn (4.8.3)
-      kgio (~> 2.6)
-      rack
-      raindrops (~> 0.7)
-    unicorn-rails (2.1.1)
-      rack
-      unicorn
     warden (1.2.3)
       rack (>= 1.0)
 
@@ -242,9 +236,9 @@ DEPENDENCIES
   libv8 (~> 3.16.14.3)
   mini_magick (~> 3.4)
   paranoid2
+  passenger
   pg
   pry-rails
-  puma
   pundit
   rails (= 4.1.4)
   rails_12factor
@@ -260,5 +254,3 @@ DEPENDENCIES
   turbolinks
   twilio-ruby
   uglifier
-  unicorn
-  unicorn-rails
