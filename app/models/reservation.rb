@@ -1,9 +1,11 @@
 class Reservation < ActiveRecord::Base
   include SendSms
   
-  after_create :send_reservation_email
+  #after_create :send_reservation_email
 
   belongs_to :user
+  has_one :address
+  accepts_nested_attributes_for :address
 
   def display_date
     "#{schedule_date.month}/#{schedule_date.day}/#{schedule_date.year}"
@@ -38,7 +40,6 @@ class Reservation < ActiveRecord::Base
   private
 
   def send_reservation_email
-    ReservationMailer.send_reservation_notice(id).deliver
   end
 
 end

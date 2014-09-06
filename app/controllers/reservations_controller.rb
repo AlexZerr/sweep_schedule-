@@ -10,6 +10,7 @@ class ReservationsController < ApplicationController
 
   def new
     @reservation = @user.reservations.new
+    @address = @reservation.build_address
     @job_types = [ ["Sweep", "Sweep"], ["Bid", "Bid"] ]
     check_for_reservations_by_date
   end
@@ -22,6 +23,8 @@ class ReservationsController < ApplicationController
     @reservation.check_schedule_times
     if @reservation.errors.empty?
       @reservation.save
+      make_address(@reservation)
+      ReservationMailer.send_reservation_notice(@reservation.id).deliver
       redirect_to user_reservation_path(@user, @reservation), notice: "Your reservation has been created."
     else
       @errors = @reservation.errors.full_messages
@@ -53,8 +56,19 @@ class ReservationsController < ApplicationController
 
   def reservation_params
     params.require(:reservation).permit(
-      :job_type, :schedule_date, :user_id, :date_search, :start_hour, :end_hour
+      :job_type, :schedule_date, :user_id, :date_search, :start_hour, :end_hour,
+      :instructions, :phone_number, :supervisor_name,
+      {address_attributes: [:id, :street, :city, :zip, :state]}
     )
+  end
+
+  def make_address(res)
+    a = Address.new
+    a.reservation_id = res.id
+    a.street = params[:reservation][:address_attributes][:street]
+    a.city = params[:reservation][:address_attributes][:city]
+    a.zip = params[:reservation][:address_attributes][:zip]
+    a.save
   end
   
 #  def check_for_reservations_by_date
