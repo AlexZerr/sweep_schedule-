@@ -1,9 +1,13 @@
-<div id="search">
-  <%= form_tag new_user_reservation_path(current_user), method: :get, remote: true  do %>
-    <div style="color:red">
-      Check the date you wish to scedule, to see whats available</br>
-      <%= text_field_tag :date_search, params[:date_search], data: {provide: "datepicker"} %>
-      <%= submit_tag "Search", :name => nil %>
-    </div>
-  <% end %>
-</div> 
+  <div id="search">
+    <%= form_tag new_user_reservation_path(current_user), method: :get, remote: true  do %>
+      Search For Available Times</br>
+      <div class="row">
+        <div class="col-sm-6">
+          <%= text_field_tag :date_search, params[:date_search], data: {provide: "datepicker"}, placeholder: "Click Here, and select a date from the calendar", class: 'form-control' %>
+        </div>
+        <div class="col-sm-6">
+          <%= submit_tag "Search", :name => nil, class: 'btn' %>
+        </div>
+      </div>
+    <% end %>
+  </div>

@@ -2,7 +2,7 @@
   <%= form_for [@user, @reservation] do |f| %>
     <div class="row">
       <div class="col-sm-5">
-        <h4> Select Date </h4>
+        <h4><u> Select Date </u></h4>
         <%= f.label :job_type %>
         <%= f.collection_select :job_type, job_types, :first, :last %></br>
         <%= f.label :schedule_date, "Schedule Date - Time" %>
@@ -18,7 +18,7 @@
         <%= f.text_area :instructions, size: "30x5", class: 'form-control' %></br>
       </div>
       <div class="col-sm-4">
-        <h4>Address</h4>
+        <h4><u>Address</u></h4>
         <%= f.fields_for :address do |a| %>
           <%= a.label :street %></br>
           <%= a.text_field :street, required: true, class: 'form-control' %>
@@ -34,14 +34,14 @@
         <% end %>
       </div>
       <div class="col-sm-3">
-        <h4>Contact Info</h4>
+        <h4><u>Contact Info</u></h4>
         <%= f.label :phone_number %></br>
         <%= f.text_field :phone_number, required: true, class: 'form-control'  %></br>
 
         <%= f.label :supervisor_name, "Name" %></br>
         <%= f.text_field :supervisor_name, required: true, class: 'form-control'  %></br>
 
-      <%= f.submit %>
+      <%= f.submit "Create Reservation", class: 'btn btn-primary' %>
       </div>
     </div>
 
