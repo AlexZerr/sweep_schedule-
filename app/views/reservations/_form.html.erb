@@ -1,49 +1,49 @@
-<%= form_for [@user, @reservation] do |f| %>
-  <div class="row">
-    <div class="col-sm-5">
-      <h4> Select Date </h4>
-      <%= f.label :job_type %>
-      <%= f.collection_select :job_type, job_types, :first, :last %></br>
-      <%= f.label :schedule_date, "Schedule Date - Time" %>
-      </br>
-      <%= f.datetime_select :schedule_date, discard_year: true, ampm: true, minute_step: 15 %>
-      </br>
-      <strong> How Long do you estimate this job will take?</strong>
-      <%= select_hour 01 %>
-      <strong>hours</strong>
-      </br>
+<div>
+  <%= form_for [@user, @reservation] do |f| %>
+    <div class="row">
+      <div class="col-sm-5">
+        <h4> Select Date </h4>
+        <%= f.label :job_type %>
+        <%= f.collection_select :job_type, job_types, :first, :last %></br>
+        <%= f.label :schedule_date, "Schedule Date - Time" %>
+        </br>
+        <%= f.datetime_select :schedule_date, discard_year: true, ampm: true, minute_step: 15 %>
+        </br>
+        <strong> How Long do you estimate this job will take?</strong>
+        <%= select_hour 01 %>
+        <strong>hours</strong>
+        </br>
+        </br>
+        <%= f.label :instructions, "Special Instructions" %></br>
+        <%= f.text_area :instructions, size: "30x5", class: 'form-control' %></br>
+      </div>
+      <div class="col-sm-4">
+        <h4>Address</h4>
+        <%= f.fields_for :address do |a| %>
+          <%= a.label :street %></br>
+          <%= a.text_field :street, required: true, class: 'form-control' %>
+          </br>
+          <%= a.label :city %></br>
+          <%= a.text_field :city, required: true, class: 'form-control' %>
+          </br>
+          <%= a.label :zip %></br>
+          <%= a.text_field :zip, required: true, class: 'form-control' %>
+          </br>
+          <%= a.label :state %></br>
+          <%= a.text_field :state, readonly: true, class: 'form-control'  %>
+        <% end %>
+      </div>
+      <div class="col-sm-3">
+        <h4>Contact Info</h4>
+        <%= f.label :phone_number %></br>
+        <%= f.text_field :phone_number, required: true, class: 'form-control'  %></br>
+
+        <%= f.label :supervisor_name, "Name" %></br>
+        <%= f.text_field :supervisor_name, required: true, class: 'form-control'  %></br>
+
+      <%= f.submit %>
+      </div>
     </div>
-    <div class="col-sm-7">
-      <h4>Address</h4>
-      <%= f.fields_for :address do |a| %>
-        <div class="row">
-          <div class="col-sm-6">
-            <%= a.label :street %></br>
-            <%= a.text_field :street, required: true %>
-            </br>
-            <%= a.label :city %></br>
-            <%= a.text_field :city, required: true %>
-            </br>
-            <%= a.label :zip %></br>
-            <%= a.text_field :zip, required: true %>
-            </br>
-            <%= a.label :state %></br>
-            <%= a.text_field :state, readonly: true  %>
-          </div>
-          <div class="col-sm-6">
-            <%= f.label :phone_number %>
-            <%= f.text_field :phone_number, required: true  %>
 
-            <%= f.label :supervisor_name %>
-            <%= f.text_field :supervisor_name, required: true  %>
-
-            <%= f.label :instructions, "Special Instructions" %></br>
-            <%= f.text_area :instructions, size: "30x3" %></br>
-          </div>
-        </div>
-      <% end %>
-    </div>
-  </div>
-
-    <%= f.submit %>
-<% end %>
+  <% end %>
+</div>
