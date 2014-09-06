@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     resources :reservations, except: [:index]
   end
 
+  resources :addresses
   resources :reservations, only: [:index]
 
   
