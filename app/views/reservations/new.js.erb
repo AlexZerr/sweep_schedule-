@@ -1,3 +1,5 @@
  v = $('#pick-bar').val();
- $('.reservations').html("<div class='blue-bar' style='margin-top:0px'><h4 class='font-center'>" + v + "</h4></div>" + '<%= j(render 'reservations/calendar', locals: {reservations: @reservations} ) %>');
+ d = new Date(v.toString());
+ c = d.toDateString();
+ $('.reservations').html("<div class='blue-bar' style='margin-top:0px'><h4 class='font-center'>" + c + "</h4></div>" + '<%= j(render 'reservations/calendar', locals: {reservations: @reservations} ) %>');
 cosole.log("<%= @reservations %>");
