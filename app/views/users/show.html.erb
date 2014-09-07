@@ -1,0 +1,66 @@
+<div class="row">
+  <div class="col-sm-12">
+    <div class="main-header">
+      <div class="blue-bar">
+        <div class="blue-bar-btn">
+          <%= link_to "Edit", edit_user_registration_path(@user), class: "btn btn-primary pull-right" %>
+        </div>
+        <h4 class="font-center"><%= @user.company_name %>
+        </h4>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+
+  <div class="col-sm-6">
+    <div class="center-text">
+    <h5>Upcoming Reservations</h5>
+      <% @user.upcoming_reservations.each do |res| %>
+
+        <div class="row">
+          <div class="col-sm-12">
+            <%= res.display_date %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            From: <%= res.start_time %> To: <%= res.end_time %>
+          </div>
+        </div>
+        <div>
+          <hr class="roller" >
+        </div>
+
+      <% end %>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="center-text">
+    <h5>Past Reservations</h5>
+      <% @user.past_reservations.each do |res| %>
+
+        <div class="row">
+          <div class="col-sm-12">
+            <%= res.display_date %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            From: <%= res.start_time %> To: <%= res.end_time %>
+          </div>
+        </div>
+        <div>
+          <hr class="roller" >
+        </div>
+
+      <% end %>
+    </div>
+  </div>
+
+</div>
+<div class='row'>
+  <div class="col-sm-12">
+  </div>
+</div>
