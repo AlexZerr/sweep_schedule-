@@ -3,7 +3,7 @@ Rails.application.routes.draw do
     controllers: { registrations: "registrations", sessions: "sessions" },
     path_names: { sign_in: "login", sign_out: "logout", sign_up: "signup" } 
 
-  resources :users, only: [:index, :show] do
+  resources :users, only: [:index, :show, :edit] do
     resources :reservations, except: [:index]
   end
 

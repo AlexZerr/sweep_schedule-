@@ -29,10 +29,10 @@
 
           <li class="dropdown">
             <%= link_to "#", class: "dropdown-toggle", data: { toggle: "dropdown"} do %>
-              Dropdown <span class="caret"></span>
+              <%= current_user.company_name %> <span class="caret"></span>
             <% end %>
             <ul class="dropdown-menu" role="menu">
-              <li><%= link_to "Account", "#" %></li>
+              <li><%= link_to "Account", user_path(current_user) %></li>
               <!-- divider -->
               <li class="divider"></li>
               <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>

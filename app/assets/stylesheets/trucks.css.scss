@@ -1,3 +1,4 @@
+
 .li-image {
   width: 120px;
   height: 100px;
@@ -17,6 +18,23 @@
   .font-center {
     text-align: center;
   }
+
+  .blue-bar-btn {
+    margin: 3px;
+
+    .btn-primary {
+      background-color: #0F58F5;
+    }
+  }
+}
+
+.blue-btn {
+
+  .btn-primary {
+    background-color: #80CCFF;
+    color: black;
+  }
+
 }
 
 .margin-bottom {
