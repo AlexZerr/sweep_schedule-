@@ -34,6 +34,8 @@ Rails.application.configure do
 
   # `config.assets.precompile` has moved to config/initializers/assets.rb
 
+  config.action_mailer.delivery_method = :letter_opener
+  config.action_mailer.raise_delivery_errors = false
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = "X-Sendfile" # for apache
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for nginx
