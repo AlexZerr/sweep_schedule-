@@ -3,7 +3,7 @@
       Search For Available Times</br>
       <div class="row">
         <div class="col-sm-6">
-          <%= text_field_tag :date_search, params[:date_search], data: {provide: "datepicker"}, placeholder: "Click Here, and select a date from the calendar", class: 'form-control' %>
+          <%= text_field_tag :date_search, params[:date_search], data: {provide: "datepicker"}, placeholder: "Click Here, and select a date from the calendar", class: 'form-control', id: "pick-bar" %>
         </div>
         <div class="col-sm-6">
           <%= submit_tag "Search", :name => nil, class: 'btn' %>
