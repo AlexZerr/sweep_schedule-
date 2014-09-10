@@ -17,6 +17,7 @@
 /config/database.yml
 /config/secrets.yml
 /config/twilio.yml
+/config/initializers/setup_mail.rb
 app/models/concerns/send_sms.rb
 /app/helpers/twilio_helper.rb
 public/assets/*
