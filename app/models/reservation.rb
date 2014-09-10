@@ -1,5 +1,5 @@
 class Reservation < ActiveRecord::Base
-  #include SendSms
+  include SendSms
   
   #after_create :send_reservation_email
 
