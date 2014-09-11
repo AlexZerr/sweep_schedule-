@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   has_many :reservations
 
   def past_reservations
-    reservations.where(schedule_date: 2.months.ago..DateTime.now ).order('schedule_date ASC').limit(8)
+    reservations.where(schedule_date: 2.months.ago..DateTime.now ).order('schedule_date DESC').limit(8)
   end
 
   def upcoming_reservations
