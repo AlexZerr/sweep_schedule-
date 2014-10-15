@@ -22,15 +22,15 @@
 */
 @import "compass";
 @import "bootstrap";
-@import url(http://fonts.googleapis.com/css?family=Oxygen:400,700,300);
+@import url(http://fonts.googleapis.com/css?family=Lobster|Oxygen:400,700,300);
 
-html{// gets rid of the horizontal scroll and it was not getting applied by bootstrap
+html, body{// gets rid of the horizontal scroll and it was not getting applied by bootstrap
     overflow-x: hidden;
     body{
     	background-color: #f8f8f8;
     	.navbar{
     		margin-bottom: 0;
-    		border-color: #f8f8f8;
+    		border-color: #80CCFF;
     	}
     } 
 }
