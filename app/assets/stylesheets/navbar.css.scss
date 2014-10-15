@@ -1,4 +1,4 @@
-.navbar-brand {
+/*.navbar-brand {
   border-right: 2px solid grey;
   background-color: #80CCFF;
   a:hover{background-color: red;}
@@ -20,7 +20,7 @@ p.style-text {
 .sweepSchHeader{
   background-color: red;
   height: 60px;
-}
+}*/
 
 
 //just leaving this here until i figure out how to get rid of padding added by bootstrap******************************
@@ -28,3 +28,8 @@ p.style-text {
 	padding-left: 0 !important;
 }
 
+.active{
+  background-color: #f8f8f8;
+  font-family: 'Oxygen', sans-serif;
+  font-size: 16px;
+}
