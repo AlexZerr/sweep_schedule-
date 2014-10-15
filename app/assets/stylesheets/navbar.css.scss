@@ -16,3 +16,15 @@ p.style-text {
 .stripes-banner {
   width: 100%;
 }
+
+.sweepSchHeader{
+  background-color: red;
+  height: 60px;
+}
+
+
+//just leaving this here until i figure out how to get rid of padding added by bootstrap******************************
+.navbar-collapse{
+	padding-left: 0 !important;
+}
+

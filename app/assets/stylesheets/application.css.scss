@@ -19,3 +19,6 @@
 @import "compass";
 @import "bootstrap";
 
+html,body{// gets rid of the horizontal scroll and it was not getting applied by bootstrap
+    overflow-x: hidden; 
+}
