@@ -4,24 +4,58 @@
 }
 
 .active{
-  background-color: #80CCFF;
+  background-color: #A3D8FB;
   font-family: 'Oxygen', sans-serif;
   font-size: 16px;
 }
 
 .sweepSchLogo{
 	font-family: 'Lobster', sans-serif;
-	font-size: 58px;
+	font-size: 78px;
   padding-left: 30px;
 }
 
 .sweepSchNavbarWrap{
-	background-color: #80CCFF;
+	background-color: #A3D8FB;
 }
 
 .blue-bar {
   //padding: 5px;
-  background-color: #80CCFF;
-  height: 150px;
-  border: 1px solid #e7e7e7;
+  background-color: #A3D8FB;
+  height: 170px;
+  border-bottom: 3px solid #e7e7e7;
+}
+
+.navbar-right .sweepSchNavBarRight{
+  margin-right: 20px;
+}
+
+.sweepSchSocialMediaWrapper{
+  float: right;
+  margin-right: 42px;
+  margin-top: -60px;
+  .sweepSchSpriteFacebook{
+    background: url('/assets/sweepSpriteSheet.png') no-repeat -214px -7px;
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+  }
+  .sweepSchSpriteTwitter{
+    background: url('/assets/sweepSpriteSheet.png') no-repeat -170px -6px;
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+  }
+  .sweepSchSpriteGooglePlus{
+    background: url('/assets/sweepSpriteSheet.png') no-repeat -126px -5px;
+    width: 35px;
+    height: 35px; 
+    display: inline-block;
+  }
+  .sweepSchSpriteLinkedin{
+    background: url('/assets/sweepSpriteSheet.png') no-repeat -82px -5px;
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+  }
 }
