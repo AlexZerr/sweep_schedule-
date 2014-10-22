@@ -1,8 +1,23 @@
-<div class="row">
-  <div class="col-sm-12">
-  <!--testing-->
-    
-    <!--<h5>Feel free to call us anytime at <u>303-691-0682</u>,
+<div class=" sweepSchMainWrapper row">
+  <div class="sweepSchLeftMain col-sm-5 col-sm-offset-1">
+    <!--<h5> We serve the entire Denver Metro Area </h5>-->
+    <div class="sweepSchDirectionsWrapper col-sm-12">
+      <h1 class="sweepSchGetStarted">Schedule a truck in 3 easy steps:</h1>
+      <div class="sweepSchUnderline"></div>
+      <div class="sweepSchSteps">
+        <div class="sweepSchSpriteGreenCheck"></div>
+        <div class="sweepSchProgressText">Create a FREE account</div>
+      </div>
+      <div class="sweepSchSteps">
+        <div class="sweepSchSpriteGreenCheck"></div>
+        <div class="sweepSchProgressText">Schedule a truck</div>
+      </div>
+      <div class="sweepSchSteps">
+        <div class="sweepSchSpriteGreenCheck"></div>
+        <div class="sweepSchProgressText">Recieve confirmation and relax!</div>
+      </div>
+    </div>
+    <h5>Feel free to call us anytime at <u>303-691-0682</u>,
       or you can schedule a truck now. All you have to do is create an account,
       and click
       <% if current_user %> 
@@ -12,23 +27,11 @@
       <% end %>
       We confirm with you and, have a truck scheduled right away.
       You can also schedule us to come out and bid a recurring sweep or snowplow schedule. 
-    </h5>-->
+    </h5>
   </div>
-</div>
-<div class=" sweepSchMainWrapper row">
-  <div class="sweepSchLeftMain col-sm-6">
-    <!--<h5> We serve the entire Denver Metro Area </h5>-->
-    <h2>We worry about it so you dont have to!</h2>
-    <div class="sweepSchSpriteGreenCheck"><a href="#"></a></div><!--green checkmark-->
-    <!--<div class="sweepSchSocialMediaWrapper"> THis does not need to be here
-      <a href="#"><div class="sweepSchSpriteFacebook"></div></a>
-      <a href="#"><div class="sweepSchSpriteTwitter"></div></a>
-      <a href="#"><div class="sweepSchSpriteGooglePlus"></div></a>
-      <a href="#"><div class="sweepSchSpriteLinkedin"></div></a>
-    </div>-->
-  </div>
-  <div class="sweepSchRightMain col-sm-6">
-    <div class="home-form">
+  <!--******************************************START RIGHT HAND SIDE****************************************-->
+  <div class="sweepSchRightMain col-sm-5">
+    <div class="home-form col-sm-12">
       <h4>Need a truck?</br>Sign up, and schedule one now.</h4>
       <%= render "devise/registrations/form"%>
     </div>
