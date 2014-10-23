@@ -50,15 +50,50 @@
   height: 42px;
   display: inline-block;
   float: right;
-  margin-top: 5px;
+  margin-top: 7px;
   margin-right: 5px;
 }
 
 .sweepSchProgressText{
   display: inline-block;
 }
+//******************Start form modification************
+.sweepSchRightMain .sweepSchSubmitWrapper{
+  padding: 0 5px;
+}
+.sweepSchSubmit{
+    height: 40px;
+    border: 2px solid #e7e7e7;
+    width: 200px;
+    font-family: 'Oxygen', sans-serif;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #A3D8FB;
+    color: #f3f3f3;
+    border-radius: 3px;
+    transition: background .25s ease-in-out;
+   -moz-transition: background .25s ease-in-out;
+   -webkit-transition: background .25s ease-in-out;
+    transition: border-color .1s ease-in-out;
+   -moz-transition:border-color .1s ease-in-out;
+   -webkit-transition: border-color.1s ease-in-out;
+       transition:  color  .25s ease-in-out;
+   -moz-transition: color  .25s ease-in-out;
+   -webkit-transition:  color .25s ease-in-out;
+}
 
-.home-image {
-  margin: 15px;
-  margin-left: -15;
+.sweepSchSubmit:hover{
+  background-color: #49B5FC;
+  border-color: #A8A8a8;
+  color: #FFF;
+}
+
+.sweepSchTextLabels{
+  font-family: 'Oxygen', sans-serif;
+  padding: 5px;
+  font-size: 16px;
+  label{
+    font-weight: initial;
+  }
 }
