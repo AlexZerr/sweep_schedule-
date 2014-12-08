@@ -22,7 +22,7 @@
       
       <div class="collapse navbar-collapse sweepSchNavbarWrap" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li><%= link_to "Home", about_path, class: "active" %></li><!--may need path to home page :: playing with this for nav bar reconstruction-->
+          <li><%= link_to "Home", root_path, class: "active" %></li><!--may need path to home page :: playing with this for nav bar reconstruction-->
           <% if current_user %>
             <li><%= link_to "Schedule A Truck", new_user_reservation_path(current_user, @reservation), class: "active" %></li>
           <% else%>
