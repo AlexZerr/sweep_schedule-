@@ -9,7 +9,7 @@ class RegistrationsController < Devise::RegistrationsController
     @user = User.new(resource_params)
     if @user.save
       sign_in @user
-      redirect_to :root, notice: "Thank you for signing up."
+      redirect_to new_user_reservation_path(@user), notice: "Thank you for signing up."
     end
   end
 
