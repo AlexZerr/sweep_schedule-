@@ -1,18 +1,65 @@
-.navbar-brand {
-  border-right: 2px solid grey;
-  background-color: #80CCFF;
-  a:hover{background-color: red;}
+//just leaving this here until i figure out how to get rid of padding added by bootstrap******************************
+.navbar-collapse{
+	padding-left: 0 !important;
 }
 
-p.style-text {
-  color: black;
+.active{
+  background-color: #A3D8FB;
+  font-family: 'Oxygen', sans-serif;
+  font-size: 16px;
 }
 
-.navbar-collapse .over {
-  position: relative;
-  left: 400px;
+.sweepSchLogo{
+	font-family: 'Lobster', sans-serif;
+	font-size: 78px;
+  padding-left: 30px;
 }
 
-.stripes-banner {
-  width: 100%;
+.sweepSchNavbarWrap{
+	background-color: #A3D8FB;
+}
+
+.blue-bar {
+  //padding: 5px;
+  background-color: #A3D8FB;
+  height: 170px;
+  border-bottom: 3px solid #e7e7e7;
+}
+
+.navbar-right .sweepSchNavBarRight{
+  margin-right: 20px;
+}
+
+.navbar-default .navbar-nav > li > a{
+  color: #545555;
+}
+
+.sweepSchSocialMediaWrapper{
+  float: right;
+  margin-right: 42px;
+  margin-top: -60px;
+  .sweepSchSpriteFacebook{
+    background: url('/assets/sweepSpriteSheet.png') no-repeat -214px -7px;
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+  }
+  .sweepSchSpriteTwitter{
+    background: url('/assets/sweepSpriteSheet.png') no-repeat -170px -6px;
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+  }
+  .sweepSchSpriteGooglePlus{
+    background: url('/assets/sweepSpriteSheet.png') no-repeat -126px -5px;
+    width: 35px;
+    height: 35px; 
+    display: inline-block;
+  }
+  .sweepSchSpriteLinkedin{
+    background: url('/assets/sweepSpriteSheet.png') no-repeat -82px -5px;
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+  }
 }

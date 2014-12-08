@@ -16,6 +16,23 @@
  *= require_self
  */
 
+/**
+* Imports
+* ----------------------------------------------------------------------------
+*/
 @import "compass";
 @import "bootstrap";
+@import url(http://fonts.googleapis.com/css?family=Lobster|Oxygen:400,700,300);
+
+html, body{// gets rid of the horizontal scroll and it was not getting applied by bootstrap
+    overflow-x: hidden;
+    height: 100%;
+    body{
+    	background-color: #f8f8f8;
+    	.navbar{
+    		margin-bottom: 0;
+    		border: none;
+    	}
+    } 
+}
 

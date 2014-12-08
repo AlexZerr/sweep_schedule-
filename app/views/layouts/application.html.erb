@@ -6,20 +6,19 @@
   <%= stylesheet_link_tag 'application' %>
   <%= javascript_include_tag 'application' %> 
   <%= csrf_meta_tags %>
+  <!--<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"> //start favicon work 
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">-->
 </head>
   <body>
     <% if !current_user %>
       <% @hide_sidebar = true %>
     <% end %>
-
-          <div>
+          <!--<div>
             <%#= image_tag "header_image.jpg", class: "stripes-banner" %>
-          </div>
-
-    <div class="row">
-      <div class="col-lg-12">
+          </div>-->
+    <div class="container-fluid">
+      <div class="row">
         <div id="main-container">
-
           <!-- Navbar begin -->
           <%= render "layouts/navbar" %>
           <!-- Navbar end -->
@@ -29,7 +28,6 @@
               <%= message %>
             </div>
           <% end if !flash.blank? %>
-
 
           <% if !@hide_sidebar %>
             <div class="row">
@@ -48,7 +46,6 @@
                   </div>
                 </div>
               </div>
-
             </div>
           <% else %>
             <div class="row">

@@ -1,12 +1,24 @@
-<div class="blue-bar">
-  <div class="row">
-    <h2 class="font-center"> Sweep A Lot </h2>
-  </div>
-</div>
-<div class="row">
-  <div class="col-sm-12">
-    <h4><u> Here at Sweep A Lot we want to make scheduling easy.</u></h4>
-    <h5>Feel free to call us anytime at <u>303-691-0682</u>,
+<div class=" sweepSchMainWrapper row">
+  <div class="sweepSchLeftMain col-sm-5 col-sm-offset-1">
+    <!--<h5> We serve the entire Denver Metro Area </h5>-->
+    <div class="sweepSchDirectionsWrapper col-sm-12">
+      <h1 class="sweepSchGetStarted">Schedule a truck in 3 easy steps:</h1>
+      <div class="sweepSchUnderline"></div>
+      <div class="sweepSchSteps col-sm-12">
+        <div class="sweepSchSpriteGreenCheck"></div>
+        <div class="sweepSchProgressText">Create a FREE account</div>
+        <div class="sweepSchSpritePurpArrow"></div>
+      </div>
+      <div class="sweepSchSteps col-sm-12">
+        <div class="sweepSchSpriteGreenCheck"></div>
+        <div class="sweepSchProgressText">Schedule a truck</div>
+      </div>
+      <div class="sweepSchSteps col-sm-12">
+        <div class="sweepSchSpriteGreenCheck"></div>
+        <div class="sweepSchProgressText">Recieve confirmation</div>
+      </div>
+    </div>
+    <!--<h5>Feel free to call us anytime at <u>303-691-0682</u>,
       or you can schedule a truck now. All you have to do is create an account,
       and click
       <% if current_user %> 
@@ -16,25 +28,21 @@
       <% end %>
       We confirm with you and, have a truck scheduled right away.
       You can also schedule us to come out and bid a recurring sweep or snowplow schedule. 
-    </h5>
+    </h5>-->
   </div>
-</div>
-<div class="row">
-  <div class="col-sm-12">
-    <h5> We serve the entire Denver Metro Area </h5>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-sm-6">
-    <div class="home-form">
-      <h4>Need a truck?</br>Sign up, and schedule one now.</h4>
+  <!--******************************************START RIGHT HAND SIDE****************************************-->
+  <div class="sweepSchRightMain col-sm-5">
+    <div class="home-form col-sm-12">
+      <!--<h4>Need a truck?</br>Sign up, and schedule one now.</h4>-->
       <%= render "devise/registrations/form"%>
     </div>
   </div>
+</div>
 
-  <div class="col-sm-6">
-    <div class="row">
+<div class="row">
+
+  <!--<div class="col-sm-6">
+    <!--<div class="row">
       <%= image_tag "little-truck.jpg", class: "col-sm-11 home-image" %>
     </div>
     <ul class="h4"><strong><u><%= link_to "Services", about_path %></u></strong>
@@ -48,5 +56,5 @@
         <li>Phone: 303-691-0682</li>
         <li>Email: <%= mail_to "theajbs@msn.com" %></li>
     </ul>
-  </div>
+  </div>-->
 </div>
