@@ -26,7 +26,7 @@
           <% if current_user %>
             <li><%= link_to "Schedule A Truck", new_user_reservation_path(current_user, @reservation), class: "active" %></li>
           <% else%>
-            <li><%= link_to "Schedule A Truck", new_user_registration_path, class: "active" %></li>
+            <li><%= link_to "Schedule A Truck", root_path, class: "active" %></li>
           <% end %>
           <li><%= link_to "Equipment", trucks_path, class: "active" %></li>
           <li><%= link_to "About", about_path, class: "active" %></li>
