@@ -102,9 +102,37 @@
   }
 }
 
+
+.our-company-box {
+  padding-right: 35px;
+}
+
 .glyph {
+ span  {
+    font-size: 25px;
+    color: #31D405;
+    margin-top: 10px;
+  }
+}
+
+.glyph-road {
+ span  {
+    font-size: 25px;
+    margin-top: 10px;
+  }
+}
+
+.glyph-envelope {
+ span  {
+    font-size: 27px;
+    margin-top: 12px;
+    color: #49B5FC;
+  }
+}
+
+.glyph-check {
   span  {
-    font-size: 35px;
+    font-size: 20px;
     color: #31D405;
     margin-top: 7px;
   }
