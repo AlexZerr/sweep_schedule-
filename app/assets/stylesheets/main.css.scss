@@ -1,6 +1,27 @@
-.sweep-list{
+.head-container {
+  height: 330px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 110%;
 
+  .headbar-image-right {
+    z-index: 0;
+    position: absolute;
+    min-height: 326px;
+    width: 130%;
+    opacity: 0.5;
+  }
 }
+
+.headbar-image-left {
+  z-index: 0;
+  position: absolute;
+  right: 52.5%;
+  min-height: 326px;
+  opacity: 0.3;
+}
+
 
 .indent {
    margin-left:35px; 
@@ -36,4 +57,13 @@
 
 .padd-right-1pr {
   padding-right: 4%;
+}
+
+.black-font {
+  color: black;
+}
+
+.head-data-container {
+  position: relative;
+  left: 3%;
 }
