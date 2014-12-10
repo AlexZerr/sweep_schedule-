@@ -126,7 +126,16 @@
 .glyph-envelope {
  span  {
     font-size: 27px;
-    margin-top: 12px;
+    margin-top: 15px;
+    color: #49B5FC;
+    background-color: #828F9E;
+  }
+}
+
+.glyph-cell {
+ span  {
+    font-size: 27px;
+    margin-top: 15px;
     color: #49B5FC;
   }
 }
@@ -138,6 +147,15 @@
     margin-top: 7px;
   }
 }
+
+.glyph-phone {
+  span  {
+    font-size: 25px;
+    color: #48FA07;
+    margin-top: 15px;
+  }
+}
+
 
 .glyph-arrow {
   span  {
