@@ -1,31 +1,28 @@
-<div class="header-bar  margin-bottom">
+<!--  <strong><em>Here</em> at Sweep-A-Lot, we realize that your customers and employees are an
+    integral and imprtant part of your company.</strong> </br>
+  </br> -->
+<div id="about-text">
   <div class="row">
-    <div class="col-sm-12">
-      <h4 class="font-center"> About Us </h4>
+    <div class="col-sm-6">
+      <em></em> 
+      <h4 class="sweepSchProgressText"><em></em>Sweep-A-Lot Is a street sweeping, snowplowing, all around parking lot maintenance company. We serve the entire Denver Metro Area. 
+        As well as Boulder and Ft Collins.</br><em></em> Our website provides a way to schedule a truck online. Just sign up, and you are on your way.
+        When it comes to roadway and parking lot maintenance, Sweep-A-Lot can provide the services you need.
+      </h4>
+    </div>
+    <div class="col-sm-4">
+      <%= image_tag "clean-lot.jpg", class: "clean-photo" %>
     </div>
   </div>
 </div>
-<div id="about-text">
-  <strong><em>Here</em> at Sweep-A-Lot, we realize that your customers and employees are an
-    integral and imprtant part of your company.</strong> </br>
-  </br>
-  <em>Keeping</em> a clean and save environment for them not only presents a good company image,
+<legend></legend>
+<div>
+
+
+  <!-- Keeping a clean and save environment for them not only presents a good company image,
   but better work surroundings
   We can Help you achieve this through clean parking lots, work areas, and also hazard free winter environments.
   Present your company as it should be, clean and save!
-  We can help!
+  We can help! -->
 </div>
-<div class="row">
-  <div class="col-sm-4">
-    <ul class="sweep-list"><strong>We provide:</strong> 
-        <li class="indent">sweeping</li>
-        <li class="indent">snow removal and sanding</li> 
-        <li class="indent">striping</li>
-        <li class="indent">asphalt maintence and repair</li>
-        <li class="indent">power washing</li>
-    </ul>
-  </div>
-  <div class="col-sm-8">
-    <%= image_tag "clean-lot.jpg", class: "clean-photo" %>
-  </div>
-</div>
+<%= render "static_pages/about_data_row" %>
