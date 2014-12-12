@@ -7,7 +7,7 @@
     <%= f.text_field :company_name, class: "form-control" %></div>
 
     <div class="sweepSchTextLabels"><%= f.label :email %>
-    <%= f.email_field :email, autofocus: true, class: "form-control" %></div>
+    <%= f.email_field :email, class: "form-control" %></div>
 
     <div class="sweepSchTextLabels"><%= f.label :password %> <% if @validatable %><i>(<%= @minimum_password_length %> characters minimum)</i><% end %><br />
       <%= f.password_field :password, autocomplete: "off", class: "form-control" %></div>
