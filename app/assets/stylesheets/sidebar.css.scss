@@ -1,8 +1,11 @@
 #main-container {  
   .side-container {
-    background-color: #D4F1FA;
-    min-height: 375px;
+    background-color: #A3D8FB;
+    min-height: 351px;
     padding: 10px;
+    border: 4px outset #C7C9C9;
+    margin: 0px 10px 0px 5px;
+
 
     .side {
       .side-head {
@@ -11,7 +14,7 @@
       }
 
       .side-main {
-        min-height: 300px;
+        min-height: 250px;
 
         .day-schedule {
           margin: 10px;
@@ -22,7 +25,7 @@
 
   #main-content {
     background-color: #f8f8f8;
-    min-height: 375px;
+    min-height: 351px;
     padding: 0 15px;
   }
 }

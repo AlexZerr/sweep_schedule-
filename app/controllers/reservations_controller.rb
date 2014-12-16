@@ -24,6 +24,7 @@ class ReservationsController < ApplicationController
     if @reservation.errors.empty?
       @reservation.save
       make_address(@reservation)
+      update_user_phone_number
       ReservationMailer.send_reservation_notice(@reservation.id).deliver
       redirect_to user_reservation_path(@user, @reservation), notice: "Your reservation has been created."
     else
@@ -71,6 +72,9 @@ class ReservationsController < ApplicationController
     a.save
   end
   
+  def update_user_phone_number
+    @user.update_attributes(phone_number: @reservation.phone_number)
+  end
 #  def check_for_reservations_by_date
 #    if params[:date_search].present?
 #      date = Date.strptime(params[:date_search], '%m/%d/%Y')
