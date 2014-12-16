@@ -73,7 +73,9 @@ class ReservationsController < ApplicationController
   end
   
   def update_user_phone_number
-    @user.update_attributes(phone_number: @reservation.phone_number)
+    if !@user.phone_number.present?
+      @user.update_attributes(phone_number: @reservation.phone_number)
+    end
   end
 #  def check_for_reservations_by_date
 #    if params[:date_search].present?
