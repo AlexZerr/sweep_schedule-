@@ -35,8 +35,14 @@
       </div>
       <div class="col-sm-3">
         <h4><u>Contact Info</u></h4>
-        <%= f.label :phone_number %></br>
-        <%= f.text_field :phone_number, required: true, class: 'form-control'  %></br>
+        <% if !current_user.phone_number.present? %>
+          <%= f.label :phone_number %></br>
+          <%= f.text_field :phone_number, required: true, class: 'form-control'  %></br>
+        <% else %>
+          <%= f.label :phone_number %></br>
+          <%= f.text_field :phone_number, readonly: true, value: current_user.phone_number, class: 'form-control'  %>
+          <%= link_to "Edit Phone Number", edit_user_registration_path(current_user) %></br>
+        <% end %>
 
         <%= f.label :supervisor_name, "Name" %></br>
         <%= f.text_field :supervisor_name, required: true, class: 'form-control'  %></br>
