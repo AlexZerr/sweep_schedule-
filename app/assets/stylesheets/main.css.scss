@@ -8,7 +8,7 @@
 
   .head-text {
     position: relative;
-    left: 6.5%;
+    left: 11.5%;
     color: #BBF2FA;
     width: 100%;
   }
@@ -18,12 +18,29 @@
     z-index: 0;
     position: absolute;
     min-height: 326px;
-    right: 2%;
+    left: -110px;
     width: 130%;
     opacity: 0.9;
 
   }
+
+  .plow-header {
+    width: 98%;
+    min-height: 326px;
+    position: absolute;
+    left: 15px;
+  }
+
+  .sweep-header {
+   height: 190%; 
+    position: absolute;
+    min-height: 326px;
+    bottom: 2px;
+  }
+
+
 }
+
 
 
 

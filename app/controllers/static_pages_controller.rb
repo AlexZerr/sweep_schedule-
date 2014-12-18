@@ -8,6 +8,9 @@ class StaticPagesController < ApplicationController
   def trucks
   end
 
+  def plows
+  end
+
   def about
   end
 
