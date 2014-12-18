@@ -23,7 +23,24 @@
     opacity: 0.9;
 
   }
+
+  .plow-header {
+    width: 98%;
+    min-height: 326px;
+    position: absolute;
+    left: 15px;
+  }
+
+  .sweep-header {
+   height: 190%; 
+    position: absolute;
+    min-height: 326px;
+    bottom: 2px;
+  }
+
+
 }
+
 
 
 
