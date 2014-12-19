@@ -8,12 +8,16 @@
   <%= csrf_meta_tags %>
   <!--<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"> //start favicon work 
   <link rel="icon" href="/favicon.ico" type="image/x-icon">-->
+
   <!--- SEO Meta tags -->
   <meta name=”description” content=”Sweep-A-Lot Is a street sweeping, snowplowing, all around parking lot maintenance company. We serve the entire Denver Metro Area. 
   As well as Boulder and Ft Collins. Our website provides a way to schedule a truck online. Just sign up, and you are on your way.
   When it comes to roadway and parking lot maintenance, Sweep-A-Lot can provide the services you need.
   We also offer: lot sanding | ice removal. We can chip-seal, stripe and power wash.”/>
   <!-- END SEO -->
+
+  <link rel="stylesheet" type="text/css" href="assets/javascripts/slick/slick.css"/>
+
 </head>
   <body>
     <% if !current_user %>
@@ -67,5 +71,6 @@
         </div>
       </div>
     </div>
+    <script type="text/javascript" src="assets/javascripts/slick/slick.min.js"></script>
   </body>
 </html>
